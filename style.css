@@ -1,4 +1,92 @@
+:root {
+    --p1-col: rgb(185, 93, 93);
+    --p2-col: rgb(135, 135, 201);
+    --tie-col: rgb(192, 115, 192);
+
+    --text-col: white;
+}
 
 body {
     background-color: grey;
+
+    font-family: Roboto, sans-serif;
+    color: var(--text-col);
+    fill: var(--text-col);
+}
+
+.tic-tac-toe * {
+    /* border: 1px solid red; */
+}
+
+.tic-tac-toe {
+    width: 500px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "p1 p2" "board board";
+    column-gap: 20px;
+}
+
+.tic-tac-toe .player-tab:nth-of-type(1) {
+    grid-area: p1;
+    border: 11px solid var(--text-col);
+    border-bottom: none;
+}
+
+.tic-tac-toe .player-tab:nth-of-type(2) {
+    grid-area: p2;
+    border: 11px solid var(--text-col);
+    border-bottom: none;
+}
+
+.tic-tac-toe .player-tab {
+    border-radius: 1rem 1rem 0 0;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.player-tab .name {
+    text-align: end;
+    font-size: 2rem;
+}
+
+.player-tab .player-icon {
+    position: relative;
+    top: -15px;
+    grid-area: 1 / 2 / -1 / -1;
+}
+
+.player-tab .score {
+    align-content: center;
+    text-align: center;
+    grid-area: 2 / 1 / 2 / 2;
+}
+
+.tic-tac-toe .player-1 {
+    background-color: var(--p1-col);
+}
+
+.tic-tac-toe .player-2 {
+    background-color: var(--p2-col);
+}
+
+.tic-tac-toe .board-container {
+    border: 11px solid var(--text-col);
+    border-top: none;
+    grid-area: board;
+    padding: 20px;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.tic-tac-toe .board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tic-tac-toe .cell {
+    align-content: center;
 }
