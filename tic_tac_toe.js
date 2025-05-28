@@ -1,3 +1,6 @@
+/* core tic tac toe game function, all it does is enforce game
+   rules and play
+*/
 const ticTacToe = (function() {
     const board = [[0,0,0], [0,0,0], [0,0,0]];
     let currentPlayer = 1;
@@ -23,8 +26,9 @@ const ticTacToe = (function() {
     const getBoard = () => {
         return Array.from(board);
     }
-    /* attempts to make a play as the current player
-       returns game status */
+    /* attempts to make a play as the current player returns game 
+       status 
+    */
     const play = (x, y) => {
         if(gameStatus) { return gameStatus };
         if(board[y][x]) { return 0; }
