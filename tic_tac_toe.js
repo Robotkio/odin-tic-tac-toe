@@ -1,7 +1,7 @@
 /* core tic tac toe game function, all it does is enforce game
    rules and play
 */
-const ticTacToe = (function() {
+function ticTacToe () {
     const board = [[0,0,0], [0,0,0], [0,0,0]];
     let currentPlayer = 1;
     let turns = 1;
@@ -61,4 +61,4 @@ const ticTacToe = (function() {
         return gameStatus = 0;
     }
     return { newGame, play, getBoard, whosTurn };
-})();
+}
