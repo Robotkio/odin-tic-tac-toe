@@ -4,7 +4,7 @@
 function ticTacToe () {
     const board = [[0,0,0], [0,0,0], [0,0,0]];
     let currentPlayer = 1;
-    let turns = 1;
+    let turns = 0;
     let gameStatus = 0;
     /* gameStatus tracks the state of the game:
        -1 : game ended in a draw
@@ -15,7 +15,7 @@ function ticTacToe () {
     const newGame = () => {
         gameStatus = 0;
         currentPlayer = 1;
-        turns = 1;
+        turns = 0;
         board[0] = [0,0,0];
         board[1] = [0,0,0];
         board[2] = [0,0,0];
