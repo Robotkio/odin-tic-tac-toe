@@ -16,10 +16,6 @@ body {
     fill: var(--text-col);
 }
 
-#tic-tac-toe * {
-    /* border: 1px solid red; */
-}
-
 #tic-tac-toe {
     width: 500px;
     height: 600px;
