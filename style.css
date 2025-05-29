@@ -1,5 +1,5 @@
 :root {
-    --p1-col: rgb(185, 93, 93);
+    --p1-col: rgb(226, 112, 112);
     --p2-col: rgb(135, 135, 201);
     --tie-col: rgb(192, 115, 192);
 
@@ -76,7 +76,7 @@ body {
 }
 
 #tic-tac-toe .board-container {
-    border: 11px solid var(--text-col);
+    border: var(--border-thickness) solid var(--text-col);
     grid-area: board;
     padding: 20px;
     border-radius: 0 0 1rem 1rem;
@@ -89,8 +89,26 @@ body {
 
 #tic-tac-toe .cell {
     align-content: center;
+    cursor: pointer;
 }
 
 .cell svg {
     pointer-events: none;
+}
+
+.reset-button {
+    border: var(--border-thickness) solid var(--text-col);
+    border-radius: var(--border-thickness);
+    margin: 0px 17px;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.tie {
+    background-color: var(--tie-col);
 }
