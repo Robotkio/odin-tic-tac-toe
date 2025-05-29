@@ -26,8 +26,8 @@ function ticTacToe () {
     const getBoard = () => {
         return Array.from(board);
     }
-    /* attempts to make a play as the current player returns game 
-       status 
+    /* attempts to make a play as the current player
+       returns game status 
     */
     const play = (x, y) => {
         if(gameStatus) { return gameStatus };
