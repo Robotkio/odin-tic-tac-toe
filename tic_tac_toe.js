@@ -43,10 +43,6 @@ function ticTacToe () {
         if(turns < 5) {
             return gameStatus = 0;
         }
-        // if 9 turns then tie
-        if(turns >= 9) { 
-            return gameStatus = -1;
-        }
         // start with all the columns
         let allSets = Array.from(board);
         // add all the rows
@@ -65,6 +61,10 @@ function ticTacToe () {
                allSets[i][0] === allSets[i][2]) {
                 return gameStatus = allSets[i][0];
             }
+        }
+        // if 9 turns then tie
+        if(turns >= 9) { 
+            return gameStatus = -1;
         }
         return gameStatus = 0;
     }
